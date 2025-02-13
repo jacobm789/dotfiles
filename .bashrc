@@ -10,14 +10,16 @@ alias ll='ls -la'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+
+export HTOPRC=~/dotfiles/htoprc
+
 alias neofetch='fastfetch'
+alias venv='source venv/bin/activate'
 
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 
-alias venv='source venv/bin/activate'
-
-export MANPAGER='nvim +Man!'
-export MANWIDTH=999
 
 # If there are multiple matches for completion, Tab should cycle through them
 bind 'TAB:menu-complete'
