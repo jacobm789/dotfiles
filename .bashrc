@@ -123,5 +123,3 @@ bind "set show-all-if-ambiguous on"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-export HTOPRC=~/dotfiles/htoprc
