@@ -22,6 +22,7 @@ set expandtab
 
 " Do not save backup files.
 set nobackup
+set noswapfile
 
 " Enable auto completion menu after pressing TAB.
 set wildmenu
@@ -39,5 +40,3 @@ inoremap kk <esc>
 
 " Use mouse to set cursor location
 set mouse=a
-
-set noswapfile
