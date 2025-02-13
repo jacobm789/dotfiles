@@ -13,8 +13,6 @@ PS1='[\u@\h \W]\$ '
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 
-export HTOPRC=~/dotfiles/htoprc
-
 alias neofetch='fastfetch'
 alias venv='source venv/bin/activate'
 
