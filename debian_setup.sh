@@ -7,6 +7,7 @@ PACKAGES=(
     curl
     wget
     git
+    gh
     vim
     htop
     btop
