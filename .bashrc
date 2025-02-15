@@ -120,6 +120,3 @@ bind '"\e[Z": menu-complete-backward'
 
 # Display a list of the matching files
 bind "set show-all-if-ambiguous on"
-
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
