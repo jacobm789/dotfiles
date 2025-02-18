@@ -7,6 +7,9 @@
 
 alias ls='ls --color=auto'
 alias ll='ls -la'
+alias la='ls -A'
+alias l='ls -CF'
+
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
@@ -18,6 +21,10 @@ alias venv='source venv/bin/activate'
 
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 
+#Spoof git diff for any 2 files
+gitlikediff() {
+    diff -u --color=always "$1" "$2" | less -FRX
+}
 
 # If there are multiple matches for completion, Tab should cycle through them
 bind 'TAB:menu-complete'
