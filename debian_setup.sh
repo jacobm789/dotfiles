@@ -4,23 +4,28 @@ echo "Updating and upgrading system..."
 sudo apt update -y && sudo apt full-upgrade -y
 
 PACKAGES=(
-    curl
-    wget
-    git
-    gh
-    vim
-    htop
     btop
-    ranger
-    neofetch
+    build-essential
+    cmake
+    curl
     fastfetch
-    tmux
+    fail2ban
+    gettext
+    gh
+    htop
+    neofetch
+    ninja-build
     nmap
+    ranger
+    ripgrep
     sshfs
     tealdeer
+    tmux
     timeshift
     ufw
-    fail2ban
+    unzip
+    vim
+    wget
 )
 
 echo "Installing packages..."
