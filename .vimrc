@@ -60,3 +60,6 @@ set hlsearch
 nnoremap <esc> :noh<return><esc>
 
 set shortmess-=S
+
+set listchars=tab:\ \ ,trail:.
+set list
