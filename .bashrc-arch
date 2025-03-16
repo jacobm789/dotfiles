@@ -9,8 +9,8 @@ alias ls='ls --color=auto'
 alias ll='ls -la'
 alias la='ls -A'
 alias l='ls -CF'
-
 alias grep='grep --color=auto'
+
 PS1='[\u@\h \W]\$ '
 
 if command -v nvim >/dev/null 2>&1; then
@@ -30,10 +30,11 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-alias neofetch='fastfetch'
-alias venv='source venv/bin/activate'
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
-alias get_idf='. $HOME/esp/esp-idf/export.sh'
+alias venv='source venv/bin/activate'
 
 #Spoof git diff for any 2 files
 gitlikediff() {
