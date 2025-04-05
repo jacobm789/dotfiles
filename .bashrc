@@ -21,29 +21,21 @@ case "$(uname -s)" in
         fi
         ;;
     Linux)
-        if grep -qi microsoft /proc/version 2>/dev/null; then
-            if [ -f "$DOTFILES/.bashrc.windows" ]; then
-                source "$DOTFILES/.bashrc.windows"
-                CONFIG_LOADED=1
-            fi
-        else
-            DISTRO=$(detect_distro)
-            case "$DISTRO" in
-                debian)
-                    if [ -f "$DOTFILES/.bashrc.debian" ]; then
-                        source "$DOTFILES/.bashrc.debian"
-                        CONFIG_LOADED=1
-                    fi
-                    ;;
-                arch)
-                    if [ -f "$DOTFILES/.bashrc.arch" ]; then
-                        source "$DOTFILES/.bashrc.arch"
-                        CONFIG_LOADED=1
-                    fi
-                    ;;
-            esac
-        fi
-        ;;
+        DISTRO=$(detect_distro)
+        case "$DISTRO" in
+            debian)
+                if [ -f "$DOTFILES/.bashrc.debian" ]; then
+                    source "$DOTFILES/.bashrc.debian"
+                    CONFIG_LOADED=1
+                fi
+                ;;
+            arch)
+                if [ -f "$DOTFILES/.bashrc.arch" ]; then
+                    source "$DOTFILES/.bashrc.arch"
+                    CONFIG_LOADED=1
+                fi
+                ;;
+        esac
 esac
 
 if [ "$CONFIG_LOADED" -eq 0 ] && [ -f ~/.bashrc.bak ]; then
