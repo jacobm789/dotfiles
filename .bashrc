@@ -15,8 +15,8 @@ CONFIG_LOADED=0
 
 case "$(uname -s)" in
     Darwin)
-        if [ -f "$DOTFILES/.bashrc.macos" ]; then
-            source "$DOTFILES/.bashrc.macos"
+        if [ -f "$DOTFILES/.bashrc.mac" ]; then
+            source "$DOTFILES/.bashrc.mac"
             CONFIG_LOADED=1
         fi
         ;;
