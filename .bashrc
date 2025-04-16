@@ -1,7 +1,5 @@
 export DOTFILES=~/dotfiles
 
-# source "$DOTFILES/.bashrc.common"
-
 detect_distro() {
     if [ -f /etc/os-release ]; then
         . /etc/os-release
@@ -41,3 +39,5 @@ fi
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
 fi
+
+bind 'set completion-ignore-case on'

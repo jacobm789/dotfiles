@@ -47,5 +47,3 @@ bind '"\e[Z": menu-complete-backward'
 
 # Display a list of the matching files
 bind "set show-all-if-ambiguous on"
-
-set completion-ignore-case on
