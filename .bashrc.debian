@@ -8,25 +8,6 @@ case $- in
       *) return;;
 esac
 
-if command -v nvim >/dev/null 2>&1; then
-    export MANPAGER='nvim +Man!'
-    export VISUAL=nvim
-    export EDITOR=nvim
-fi
-
-export MANWIDTH=160
-
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -83,7 +64,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    #alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -96,23 +77,9 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -la'
-alias la='ls -A'
-alias l='ls -CF'
-
-#Spoof git diff for any 2 files
-gitlikediff() {
-    diff -u --color=always "$1" "$2" | less -FRX
-}
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+# alias ll='ls -la'
+# alias la='ls -A'
+# alias l='ls -CF'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -124,12 +91,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# If there are multiple matches for completion, Tab should cycle through them
-bind 'TAB:menu-complete'
-
-# And Shift-Tab should cycle backwards
-bind '"\e[Z": menu-complete-backward'
-
-# Display a list of the matching files
-bind "set show-all-if-ambiguous on"
