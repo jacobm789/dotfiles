@@ -44,7 +44,7 @@ fi
 bind 'set completion-ignore-case on'
 
 alias ls='ls --color=auto'
-alias ll='ls -la'
+alias ll='ls -lA'
 alias la='ls -A'
 alias l='ls -CF'
 alias grep='grep --color=auto'
