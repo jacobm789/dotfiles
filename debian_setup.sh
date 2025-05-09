@@ -13,10 +13,10 @@ PACKAGES=(
     gettext
     gh
     htop
+    lf
     neofetch
     ninja-build
     nmap
-    ranger
     ripgrep
     sshfs
     tealdeer
