@@ -97,5 +97,3 @@ bind '"\e[Z": menu-complete-backward'
 bind "set show-all-if-ambiguous on"
 
 export PATH="$HOME/scripts:$PATH"
-
-source ~/dotfiles/lfcd.sh
