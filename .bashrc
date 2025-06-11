@@ -85,8 +85,58 @@ alias tma='tmux a || tmux new -s main'
 
 #Spoof git diff for any 2 files
 gitlikediff() {
-    diff -u --color=always "$1" "$2" | less -FRX
+  local file1 file2
+  local extra_args=()
+  local found_marker=0
+
+  for arg in "$@"; do
+    if [[ $found_marker -eq 0 ]]; then
+      if [[ $arg == "--" ]]; then
+        found_marker=1
+      else
+        extra_args+=("$arg")
+      fi
+    else
+      # After "--", collect diff flags
+      extra_args+=("$arg")
+    fi
+  done
+
+  # The first two in extra_args are files, the rest are diff flags
+  file1="${extra_args[0]}"
+  file2="${extra_args[1]}"
+  unset extra_args[0] extra_args[1]
+
+  diff -u --color=always "$file1" "$file2" "${extra_args[@]}" | less -FRX
 }
+
+_gitlikediff_complete() {
+  local cur prev
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+  # Find position of "--"
+  local marker_idx=-1
+  for i in "${!COMP_WORDS[@]}"; do
+    if [[ "${COMP_WORDS[$i]}" == "--" ]]; then
+      marker_idx=$i
+      break
+    fi
+  done
+
+  if (( marker_idx != -1 && COMP_CWORD > marker_idx )); then
+    # After "--", complete diff flags
+    local diff_flags
+    diff_flags=$(diff --help | grep -oE -- '--[a-zA-Z0-9-]+' | tr '\n' ' ')
+    COMPREPLY=( $(compgen -W "$diff_flags" -- "$cur") )
+  else
+    # Before "--", complete files/dirs
+    compopt -o default
+    return 1
+  fi
+}
+
+complete -F _gitlikediff_complete gitlikediff
 
 # If there are multiple matches for completion, Tab should cycle through them
 bind 'TAB:menu-complete'
