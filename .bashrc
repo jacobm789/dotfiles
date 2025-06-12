@@ -16,17 +16,17 @@ case "$(uname -s)" in
         DISTRO=$(detect_distro)
         case "$DISTRO" in
             debian)
-                source "$DOTFILES/.bashrc.debian"
+                source "$DOTFILES/debian/.bashrc"
                 CONFIG_LOADED=1
                 ;;
             arch)
-                source "$DOTFILES/.bashrc.arch"
+                source "$DOTFILES/arch/.bashrc"
                 CONFIG_LOADED=1
                 ;;
         esac
         ;;
     Darwin)
-        source "$DOTFILES/.bashrc.mac"
+        source "$DOTFILES/mac/.bashrc"
         CONFIG_LOADED=1
         ;;
 esac
