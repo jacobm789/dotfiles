@@ -82,6 +82,7 @@ fi
 
 alias venv='source venv/bin/activate'
 alias tma='tmux a || tmux new -s main'
+alias tmm='tmux a -t main || tmux new -s main'
 
 #Spoof git diff for any 2 files
 gitlikediff() {
@@ -148,3 +149,7 @@ bind '"\e[Z": menu-complete-backward'
 bind "set show-all-if-ambiguous on"
 
 export PATH="$HOME/scripts:$PATH"
+
+if ! tmux ls 2>/dev/null | grep -q "(attached)"; then
+    tmux a -t main || tmux new -s main
+fi
