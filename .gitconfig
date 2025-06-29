@@ -1,0 +1,19 @@
+[user]
+	email = jacobamayes@gmail.com
+	name = Jacob Mayes
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = master
+[diff]
+	tool = side-by-side-diff
+[difftool "vimdiff"]
+	path = diff
+[difftool "side-by-side-diff"]
+	cmd = diff --side-by-side --color=always \"$LOCAL\" \"$REMOTE\" | less -FRX
+[difftool]
+	prompt = false
