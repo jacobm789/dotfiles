@@ -114,3 +114,4 @@ set nodirfirst
 set hidden
 set info size
 set dircounts
+set ratios 2:2:3
