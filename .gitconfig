@@ -17,3 +17,5 @@
 	cmd = diff --side-by-side --color=always \"$LOCAL\" \"$REMOTE\" | less -FRX
 [difftool]
 	prompt = false
+[merge]
+	ff = only
