@@ -21,3 +21,5 @@
 	ff = only
 [pull]
 	rebase = true
+[alias]
+	lg = log --graph --all --oneline --decorate
