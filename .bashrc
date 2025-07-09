@@ -61,9 +61,6 @@ export MANWIDTH=160
 # See bash(1) for more options
 HISTCONTROL=ignoreboth:erasedups
 
-# exclude these commands from history
-export HISTIGNORE="pwd:exit:clear:htop:btop:ranger:neofetch:fastfetch"
-
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -146,7 +143,7 @@ bind 'TAB:menu-complete'
 bind '"\e[Z": menu-complete-backward'
 
 # Display a list of the matching files
-bind "set show-all-if-ambiguous on"
+bind "set show-all-if-ambiguous off"
 
 export PATH="$HOME/scripts:$PATH"
 
