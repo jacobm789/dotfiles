@@ -1,3 +1,11 @@
+## Instructions
+
+* Clone repo
+* cd into it
+* Run "stow -nv .", and if everything looks good, "stow ."
+* Manually symlink btop config based on which version you have
+
+
 ## Attributions and Licenses
 
 This dotfiles repository contains a mix of original configuration files, scripts, and customizations, alongside modified versions of configuration files sourced from other open-source projects.
