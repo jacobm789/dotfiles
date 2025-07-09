@@ -1,0 +1,9 @@
+.git
+.gitconfig
+/arch
+/debian
+/mac
+LICENSE.md
+LICENSES
+README.md
+^/btop.*
