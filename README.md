@@ -2,7 +2,8 @@
 
 * Clone repo
 * cd into it
-* Run "stow -nv .", and if everything looks good, "stow ."
+* cp .stow-local-ignore.template .stow-local-ignore and edit to exclude what you don't want symlinked
+* Run "stow -nv .", and when everything looks good, "stow ."
 * Manually symlink btop config based on which version you have
 
 

@@ -1,8 +1,13 @@
 .git
 .gitconfig
+.gitignore
+.stow-local-ignore.template
 /arch
 /debian
 /mac
+# /hypr
+# /waybar
+# /kitty
 LICENSE.md
 LICENSES
 README.md
