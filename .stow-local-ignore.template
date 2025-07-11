@@ -1,14 +1,20 @@
+# Definitely don't include
 .git
-.gitconfig
 .gitignore
 .stow-local-ignore.template
 /arch
 /debian
 /mac
-# /hypr
-# /waybar
-# /kitty
+
+# Optional
+.gitconfig
+/hypr
+/waybar
+/kitty
 LICENSE.md
 LICENSES
 README.md
 ^/btop.*
+
+# You might not use git worktrees this particular way
+/.worktrees
