@@ -146,7 +146,3 @@ bind '"\e[Z": menu-complete-backward'
 bind "set show-all-if-ambiguous off"
 
 export PATH="$HOME/scripts:$PATH"
-
-if ! tmux ls 2>/dev/null | grep -q "(attached)"; then
-    tmux a -t main || tmux new -s main
-fi
