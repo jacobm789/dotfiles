@@ -48,6 +48,7 @@ alias ll='ls -lA'
 alias la='ls -A'
 alias l='ls -CF'
 alias grep='grep --color=auto'
+alias git-worktree-diff='git worktree list --porcelain | grep "^worktree" | awk "{print \$2}" | while read -r dir; do echo "Worktree: $dir"; git -C "$dir" diff; done'
 
 if command -v nvim >/dev/null 2>&1; then
     export MANPAGER='nvim +Man!'
