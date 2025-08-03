@@ -1,0 +1,20 @@
+window-theme = ghostty
+window-decoration = none
+theme = Adwaita Dark
+background = #000000
+window-padding-balance = true
+
+font-size = 9
+font-family = BigBlueTermPlus Nerd Font Mono
+adjust-cell-height = 3
+
+shell-integration-features = no-cursor
+cursor-style = block
+mouse-hide-while-typing = true
+
+gtk-wide-tabs = false
+gtk-tabs-location = bottom
+
+shell-integration = bash
+
+# command = /bin/zsh --login --interactive
