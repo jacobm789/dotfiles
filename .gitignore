@@ -1,1 +1,3 @@
 .stow-local-ignore
+.config/btop/btop.conf
+*.log

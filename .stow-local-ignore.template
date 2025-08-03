@@ -5,16 +5,25 @@
 /arch
 /debian
 /mac
-
-# Optional
-.gitconfig
-/hypr
-/waybar
-/kitty
+.config/btop/btop(?!\.conf$).*\.conf
+btop-linker.sh
 LICENSE.md
 LICENSES
 README.md
-^/btop.*
+
+# Optional: Comment out what you want, uncomment what you don't want
+.gitconfig
+hypr
+waybar
+kitty
+ghostty
+# .globalgitignore
+# .tmux.conf
+# btop.conf
+# htoprc
+# lfrc
+# .vimrc
+# .bashrc
 
 # You might not use git worktrees this particular way
 /.worktrees

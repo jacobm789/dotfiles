@@ -1,10 +1,12 @@
 ## Instructions
 
-* Clone repo
+### Warning, if not on Debian, Arch, or MacOS, .bashrc, btop-linker.sh, and probably more will need to be modified
+
+* Clone repo in home directory
 * cd into it
 * cp .stow-local-ignore.template .stow-local-ignore and edit to exclude what you don't want symlinked
-* Run "stow -nv .", and when everything looks good, "stow ."
-* Manually symlink btop config based on which version you have
+* . btop-linker.sh to symlink correct btop.conf
+* Run "stow --no-folding -nvv .", and when everything looks good, "stow --no-folding ."
 
 
 ## Attributions and Licenses
