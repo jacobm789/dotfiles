@@ -1,0 +1,14 @@
+$include /etc/inputrc
+
+# set editing-mode vi
+
+set completion-ignore-case on
+
+# If there are multiple matches for completion, Tab should cycle through them
+TAB:menu-complete
+
+# And Shift-Tab should cycle backwards
+"\e[Z": menu-complete-backward
+
+# Display a list of the matching files
+set show-all-if-ambiguous off

@@ -24,6 +24,7 @@ ghostty
 # lfrc
 # .vimrc
 # .bashrc
+# .inputrc
 
 # You might not use git worktrees this particular way
 /.worktrees
