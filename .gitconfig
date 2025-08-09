@@ -24,3 +24,5 @@
 	br = branch -avv
 [core]
 	excludesfile = ~/.globalgitignore
+[include]
+    path = ~/.gitconfig.local
