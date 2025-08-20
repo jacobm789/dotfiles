@@ -19,6 +19,7 @@ PACKAGES=(
     nmap
     ripgrep
     sshfs
+    stow
     tealdeer
     tmux
     timeshift
