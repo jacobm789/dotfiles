@@ -10,13 +10,16 @@ PACKAGES=(
     curl
     fastfetch
     fail2ban
+    fd-find
     gettext
     gh
+    golang
     htop
     lf
     neofetch
     ninja-build
     nmap
+    npm
     ripgrep
     sshfs
     stow
@@ -27,6 +30,7 @@ PACKAGES=(
     unzip
     vim
     wget
+    wl-clipboard
 )
 
 echo "Installing packages..."
