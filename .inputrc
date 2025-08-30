@@ -12,3 +12,6 @@ TAB:menu-complete
 
 # Display a list of the matching files
 set show-all-if-ambiguous off
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
