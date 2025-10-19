@@ -12,6 +12,7 @@ LICENSES
 README.md
 
 # Optional: Comment out what you want, uncomment what you don't want
+# /scripts
 .gitconfig
 hypr
 waybar
