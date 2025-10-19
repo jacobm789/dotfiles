@@ -20,7 +20,7 @@
 [pull]
 	rebase = true
 [alias]
-	lg = log --graph --all --oneline --decorate -30
+	lg = log --graph --all --oneline --decorate
 	br = branch -avv
 [core]
 	excludesfile = ~/.globalgitignore
