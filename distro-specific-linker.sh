@@ -1,6 +1,7 @@
 #!/bin/bash
 
 mkdir -p ~/dotfiles/.config/btop
+mkdir -p ~/dotfiles/.config/htop
 
 detect_distro() {
     if [ -f /etc/os-release ]; then
@@ -17,13 +18,16 @@ case "$(uname -s)" in
         case "$DISTRO" in
             debian)
                 ln -srf ~/dotfiles/debian/btop.conf ~/dotfiles/.config/btop/
+                ln -srf ~/dotfiles/debian/htoprc ~/dotfiles/.config/htop/
                 ;;
             arch)
                 ln -srf ~/dotfiles/arch/btop.conf ~/dotfiles/.config/btop/
+                ln -srf ~/dotfiles/arch/htoprc ~/dotfiles/.config/htop/
                 ;;
         esac
         ;;
     Darwin)
         ln -srf ~/dotfiles/mac/btop.conf ~/dotfiles/.config/btop/
+        ln -srf ~/dotfiles/mac/htoprc ~/dotfiles/.config/htop/
         ;;
 esac

@@ -1,4 +1,5 @@
 .gitconfig-work
 .stow-local-ignore
 .config/btop/btop.conf
+.config/htop/htoprc
 *.log

@@ -6,7 +6,7 @@
 /debian
 /mac
 .config/btop/btop(?!\.conf$).*\.conf
-btop-linker.sh
+distro-specific-linker.sh
 LICENSE.md
 LICENSES
 README.md

@@ -14,7 +14,7 @@ else
 
     tmux select-window -t $MAIN:1
     tmux send-keys -t 1 'btop' C-m
-    tmux split-window -v
+    tmux split-window -h
     tmux send-keys -t 2 'htop' C-m
 
     tmux attach -t $MAIN:1
