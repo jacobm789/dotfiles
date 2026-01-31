@@ -1,5 +1,6 @@
 window-theme = ghostty
 window-decoration = none
+maximize = true
 theme = Adwaita Dark
 background = #000000
 window-padding-balance = true
