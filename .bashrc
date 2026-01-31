@@ -76,7 +76,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 alias venv='source venv/bin/activate'
-alias tma='tmux a || tmm.sh || tmux new -s main'
+alias tma='tmm.sh'
 
 #Spoof git diff for any 2 files
 gitlikediff() {

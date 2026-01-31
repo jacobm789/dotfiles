@@ -4,6 +4,7 @@ MAIN="main"
 
 if tmux list-sessions | grep -q '(attached)'; then
     tmux detach
+    exit 1
 fi
 
 if tmux has-session -t $MAIN 2>/dev/null; then
