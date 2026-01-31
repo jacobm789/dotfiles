@@ -6,6 +6,7 @@
 /debian
 /mac
 .config/btop/btop(?!\.conf$).*\.conf
+keyd_default.conf
 distro-specific-linker.sh
 LICENSE.md
 LICENSES
