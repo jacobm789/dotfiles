@@ -78,6 +78,12 @@ fi
 alias venv='source venv/bin/activate'
 alias tma='tmm.sh'
 
+if command -v wsl-open >/dev/null 2>&1; then
+    alias open='wsl-open'
+else
+    alias open='xdg-open'
+fi
+ 
 #Spoof git diff for any 2 files
 gitlikediff() {
   local file1 file2
@@ -133,4 +139,20 @@ _gitlikediff_complete() {
 
 complete -F _gitlikediff_complete gitlikediff
 
-export PATH="$HOME/scripts:$PATH"
+# cd into the directory of the selected file
+cdf() {
+  local file dir
+  file=$(fzf +m -q "$1") && dir=$(dirname -- "$file") && cd -- "$dir"
+}
+
+if command -v fzf >/dev/null 2>&1; then
+  eval "$(fzf --bash)"
+fi
+
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init bash)"
+fi
+
+if [[ ":$PATH:" != *":$HOME/scripts:"* ]]; then
+    export PATH="$HOME/scripts:$PATH"
+fi
