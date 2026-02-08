@@ -83,7 +83,7 @@ if command -v wsl-open >/dev/null 2>&1; then
 else
     alias open='xdg-open'
 fi
- 
+
 #Spoof git diff for any 2 files
 gitlikediff() {
   local file1 file2
@@ -144,6 +144,9 @@ cdf() {
   local file dir
   file=$(fzf +m -q "$1") && dir=$(dirname -- "$file") && cd -- "$dir"
 }
+
+# start process detached from shell
+ditch() { nohup "$@" >/dev/null 2>&1 & disown; }
 
 if command -v fzf >/dev/null 2>&1; then
   eval "$(fzf --bash)"
