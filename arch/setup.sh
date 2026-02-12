@@ -11,15 +11,23 @@ PACKAGES=(
     fastfetch
     fail2ban
     fd
+    fzf
     gettext
+    ghostty
     github-cli
     go
+    keyd
     htop
+    kitty
     lf
+    neovim
     ninja
     nmap
     npm
+    openssh
+    rsyce
     ripgrep
+    sl
     sshfs
     stow
     tealdeer
@@ -27,9 +35,9 @@ PACKAGES=(
     timeshift
     ufw
     unzip
-    vim
     wget
     wl-clipboard
+    zoxide
 )
 
 echo "Installing packages..."
