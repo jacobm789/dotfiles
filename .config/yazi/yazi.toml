@@ -1,0 +1,19 @@
+[mgr]
+sort_by       = "alphabetical"
+sort_sensitive = false
+sort_reverse  = false
+sort_dir_first = false
+show_hidden   = true
+
+[open]
+prepend_rules = [
+    { mime = "application/zip", name = "*.lbx", use = "open" },
+    { mime = "application/x-zip*", name = "*.lbx", use = "open" },
+    { mime = "application/octet-stream", name = "*.lbx", use = "open" },
+    { name = "*.lbx", use = "open" },
+]
+
+[opener]
+open = [
+    { run = '$OPENER "$@"', orphan = true, desc = "Open w/ default app", for = "linux" },
+]
