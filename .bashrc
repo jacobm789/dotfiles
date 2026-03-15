@@ -41,6 +41,7 @@ if [ -f ~/.bashrc.local ]; then
 fi
 
 alias ls='ls --color=auto'
+alias lsa='ls -lAh'
 alias ll='ls -lA'
 alias la='ls -A'
 alias l='ls -CF'
@@ -63,8 +64,28 @@ HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=-1
+
+HISTTIMEFORMAT="%F %T "
+
+HISTIGNORE="\
+ls:lsa:ll:la:l:\
+cd:cd ..:cd -:\
+z:z ..:z -:\
+pwd:\
+yazi:\
+clear:\
+reset:exec bash:\
+exit:logout:\
+jobs:bg:fg:[bf]g:\
+fc:history:history*:\
+* --help:* --version:\
+top:htop:btop:\
+vi:vim:nvim\
+"
+
+HISTIGNORE="${HISTIGNORE}:${HISTIGNORE//:/ :} "
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
