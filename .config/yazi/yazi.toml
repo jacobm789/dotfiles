@@ -1,4 +1,5 @@
 [mgr]
+mouse_events = []
 sort_by       = "alphabetical"
 sort_sensitive = false
 sort_reverse  = false
