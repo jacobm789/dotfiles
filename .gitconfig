@@ -21,6 +21,7 @@
 	rebase = true
 [alias]
 	lg = log --graph --all --oneline --decorate
+	lgs = log --all --graph --decorate --patch-with-stat
 	br = branch -avv
 [core]
 	excludesfile = ~/.globalgitignore
