@@ -21,5 +21,4 @@ prepend_rules = [
     { mime = "application/zip", name = "*.lbx", use = "open" },
     { mime = "application/x-zip*", name = "*.lbx", use = "open" },
     { mime = "application/octet-stream", name = "*.lbx", use = "open" },
-    { name = "*.lbx", use = "open" },
 ]
