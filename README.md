@@ -5,8 +5,8 @@
 * Clone repo in home directory
 * cd into it
 * cp .stow-local-ignore.template .stow-local-ignore and edit to exclude what you don't want symlinked
-* . btop-linker.sh to symlink correct btop.conf
-* Run "stow --no-folding -nvv .", and when everything looks good, "stow --no-folding ."
+* . version-linker.sh to symlink correct btop.conf
+* Run "stow --no-folding -nv .", and when everything looks good, "stow --no-folding ."
 
 
 ## Attributions and Licenses

@@ -98,7 +98,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 alias venv='source venv/bin/activate'
-alias tma='tmm.sh'
+alias tma='tmux new -s main || tmux a'
 
 if command -v wsl-open >/dev/null 2>&1; then
     alias open='wsl-open'
