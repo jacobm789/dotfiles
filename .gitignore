@@ -3,3 +3,4 @@
 .config/btop/btop.conf
 .config/htop/htoprc
 *.log
+htop_history
