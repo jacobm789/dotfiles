@@ -98,7 +98,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 alias venv='source venv/bin/activate'
-alias tma='tmux new -s main || tmux a'
+alias tma='tmux new -s main || tmux a -d' # detach any other clients attached to help prevent opening yazi when other clients attached, causing random and potentially distructive inputs at startup
 
 if command -v wsl-open >/dev/null 2>&1; then
     alias open='wsl-open'
