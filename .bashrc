@@ -18,17 +18,17 @@ case "$(uname -s)" in
             debian)
                 source "$DOTFILES/debian/.bashrc"
                 CONFIG_LOADED=1
-                ;;
+	    ;;
             arch)
                 source "$DOTFILES/arch/.bashrc"
                 CONFIG_LOADED=1
-                ;;
+	    ;;
         esac
-        ;;
+    ;;
     Darwin)
         source "$DOTFILES/mac/.bashrc"
         CONFIG_LOADED=1
-        ;;
+    ;;
 esac
 
 if [ "$CONFIG_LOADED" -eq 0 ] && [ -f ~/.bashrc.bak ]; then

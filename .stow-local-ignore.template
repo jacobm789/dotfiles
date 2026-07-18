@@ -8,7 +8,7 @@
 .config/btop/btop(?!\.conf$).*\.conf
 .config/htop/htoprc_.*
 keyd_default.conf
-version-linker.sh
+distro-specific-linker.sh
 LICENSE.md
 LICENSES
 README.md
