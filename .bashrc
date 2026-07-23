@@ -41,9 +41,9 @@ if [ -f ~/.bashrc.local ]; then
 fi
 
 alias ls='ls --color=auto'
-alias lsa='ls -lAh'
-alias ll='ls -lA'
-alias la='ls -A'
+alias lsa='ls -lah'
+alias ll='ls -la'
+alias la='ls -a'
 alias l='ls -CF'
 alias grep='grep --color=auto'
 alias info='info --vi-keys'
@@ -169,6 +169,16 @@ cdf() {
 
 # start process detached from shell
 ditch() { nohup "$@" >/dev/null 2>&1 & disown; }
+
+histedit() {
+  local tmp
+  tmp=$(mktemp)
+  history -w "$tmp"
+  "${EDITOR:-vim}" "$tmp"
+  history -c
+  history -r "$tmp"
+  rm -f "$tmp"
+}
 
 if command -v fzf >/dev/null 2>&1; then
   eval "$(fzf --bash)"
