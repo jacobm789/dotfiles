@@ -174,7 +174,7 @@ histedit() {
   local tmp
   tmp=$(mktemp)
   history -w "$tmp"
-  "${EDITOR:-vim}" "$tmp"
+  "${EDITOR:-vim}" + "$tmp"
   history -c
   history -r "$tmp"
   rm -f "$tmp"
