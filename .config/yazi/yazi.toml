@@ -19,7 +19,7 @@ image_quality = 50
 [opener]
 open = [
     # { run = '$OPENER "$@"', orphan = true, desc = "Open w/ default app", for = "linux" }, # $@ depricated in 25.12.29
-    { run = '$OPENER "%s"', orphan = true, desc = "Open w/ default app", for = "linux" },
+    { run = '$OPENER %s', orphan = true, desc = "Open w/ default app", for = "linux" },
 ]
 
 [open]

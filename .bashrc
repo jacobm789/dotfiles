@@ -170,7 +170,7 @@ cdf() {
 # start process detached from shell
 ditch() { nohup "$@" >/dev/null 2>&1 & disown; }
 
-histedit() {
+he() {
   local tmp
   tmp=$(mktemp)
   history -w "$tmp"
