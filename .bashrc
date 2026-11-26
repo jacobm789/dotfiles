@@ -170,14 +170,11 @@ cdf() {
 # start process detached from shell
 ditch() { nohup "$@" >/dev/null 2>&1 & disown; }
 
-he() {
-  local tmp
-  tmp=$(mktemp)
-  history -w "$tmp"
-  "${EDITOR:-vim}" + "$tmp"
+he() { # make sure you have "shopt -s histappend" to avoid overwriting your edits when closing other shells loaded before editing from this shell
+  history -a
+  "${EDITOR:-vim}" + "$HISTFILE"
   history -c
-  history -r "$tmp"
-  rm -f "$tmp"
+  history -r "$HISTFILE"
 }
 
 if command -v fzf >/dev/null 2>&1; then
